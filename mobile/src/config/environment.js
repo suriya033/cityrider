@@ -5,16 +5,14 @@ export const IS_DEV = __DEV__;
 
 // Backend API Configuration
 export const API_CONFIG = {
-    // Development: Local backend
+    // Development: Local backend (for testing on same WiFi)
     development: {
         baseURL: 'http://10.219.31.35:5004/api',
         timeout: 10000,
     },
-    // Production: Deployed backend
+    // Production: Deployed backend on Render (works from anywhere!)
     production: {
-        // TEMPORARY: Using local IP for testing production APK on local network
-        // TODO: Replace with your deployed backend URL when ready for real production
-        baseURL: 'http://10.219.31.35:5004/api',
+        baseURL: 'https://cityrider-backend.onrender.com/api',
         timeout: 15000,
     },
 };

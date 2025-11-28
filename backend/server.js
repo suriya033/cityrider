@@ -69,7 +69,7 @@ app.use('/api/rides', rideRoutes);
 app.use('/api/bookings', bookingRoutes);
 app.use('/api/messages', messageRoutes);
 app.use('/api/users', userRoutes);
-app.use('/api/health', healthRoutes);
+app.use('/api', healthRoutes); // Health routes at /api/health and /api/info
 
 // Basic route
 app.get('/', (req, res) => {
