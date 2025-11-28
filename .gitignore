@@ -1,0 +1,49 @@
+# Node modules
+node_modules/
+
+# Expo
+.expo/
+.expo-shared/
+mobile/.expo/
+mobile/.expo-shared/
+
+# Build outputs
+dist/
+build/
+*.apk
+*.ipa
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Mobile specific
+mobile/android/
+mobile/ios/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+mobile/web-build/
+
+# Backend specific
+backend/uploads/
