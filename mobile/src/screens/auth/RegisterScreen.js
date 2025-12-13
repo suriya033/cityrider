@@ -120,7 +120,7 @@ export default function RegisterScreen({ navigation }) {
       if (!dateOfBirth) { setError('Please select your date of birth'); return; }
       const age = calculateAge(dateOfBirth);
       if (age < 13) { setError('You must be at least 13 years old to register'); return; }
-      if (!mobileNumber.trim() || mobileNumber.trim().length !== 12) { setError('Please enter a valid 12-digit mobile number'); return; }
+      if (!mobileNumber.trim() || mobileNumber.trim().length !== 10) { setError('Please enter a valid 10-digit mobile number'); return; }
       if (!aadharNumber.trim() || aadharNumber.trim().length !== 12) { setError('Please enter a valid 12-digit Aadhar number'); return; }
       if (!city.trim()) { setError('Please enter your city'); return; }
 
@@ -196,7 +196,7 @@ export default function RegisterScreen({ navigation }) {
                 {showDatePicker && (
                   <DateTimePicker value={dateOfBirth || new Date(2000, 0, 1)} mode="date" display="default" onChange={handleDateChange} maximumDate={new Date()} minimumDate={new Date(1940, 0, 1)} />
                 )}
-                <TextInput label="Mobile Number" value={mobileNumber} onChangeText={text => setMobileNumber(text.replace(/[^0-9]/g, ''))} mode="outlined" keyboardType="phone-pad" maxLength={12} disabled={loading} style={styles.input} left={<TextInput.Icon icon="phone" />} theme={{ roundness: 12 }} />
+                <TextInput label="Mobile Number" value={mobileNumber} onChangeText={text => setMobileNumber(text.replace(/[^0-9]/g, ''))} mode="outlined" keyboardType="phone-pad" maxLength={10} disabled={loading} style={styles.input} left={<TextInput.Icon icon="phone" />} theme={{ roundness: 12 }} />
                 <TextInput label="Aadhar Number" value={aadharNumber} onChangeText={text => setAadharNumber(text.replace(/[^0-9]/g, ''))} mode="outlined" keyboardType="number-pad" maxLength={12} disabled={loading} style={styles.input} left={<TextInput.Icon icon="card-account-details" />} theme={{ roundness: 12 }} />
                 <TextInput label="City" value={city} onChangeText={setCity} mode="outlined" autoCapitalize="words" disabled={loading} style={styles.input} left={<TextInput.Icon icon="city" />} theme={{ roundness: 12 }} />
                 {/* Gender & Profile Image - Available for all */}
