@@ -13,7 +13,7 @@ The app was crashing immediately after installation with the error:
 
 ### 2. ❌ Unreachable Backend Server
 - **Location**: `mobile/src/services/api.js`
-- **Issue**: Hardcoded local IP `http://10.231.17.88:5004/api`
+- **Issue**: Hardcoded local IP `http://10.231.17.88:5005/api`
 - **Impact**: App tries to connect to local development server which doesn't exist in production
 
 ### 3. ❌ No Error Handling for Network Failures
@@ -25,7 +25,7 @@ The app was crashing immediately after installation with the error:
 
 ### Fix 1: Environment-Based Configuration
 Created `src/config/environment.js` to manage different environments:
-- **Development**: Uses local backend (10.231.17.88:5004)
+- **Development**: Uses local backend (10.231.17.88:5005)
 - **Production**: Uses deployed backend URL (configurable)
 
 ### Fix 2: Resilient Network Error Handling

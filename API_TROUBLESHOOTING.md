@@ -7,7 +7,7 @@ This error occurs when the mobile app cannot connect to the backend server. Foll
 ### Step 1: Verify Backend is Running
 
 1. Check the terminal running `npm run dev` in the backend folder
-2. You should see: `🚀 Server running on port 5004`
+2. You should see: `🚀 Server running on port 5005`
 3. If not running, start it:
    ```bash
    cd backend
@@ -16,7 +16,7 @@ This error occurs when the mobile app cannot connect to the backend server. Foll
 
 ### Step 2: Check Your IP Address
 
-The current API URL is: `http://10.211.33.35:5004/api`
+The current API URL is: `http://10.211.33.35:5005/api`
 
 **For Physical Device:**
 1. Find your computer's IP address:
@@ -24,24 +24,24 @@ The current API URL is: `http://10.211.33.35:5004/api`
    - Mac/Linux: Open Terminal and type `ifconfig` or `ip addr`
 2. Update `mobile/src/services/api.js` line 4:
    ```javascript
-   export const API_BASE_URL = 'http://YOUR_IP_ADDRESS:5004/api';
+   export const API_BASE_URL = 'http://YOUR_IP_ADDRESS:5005/api';
    ```
 
 **For Android Emulator:**
 ```javascript
-export const API_BASE_URL = 'http://10.0.2.2:5004/api';
+export const API_BASE_URL = 'http://10.0.2.2:5005/api';
 ```
 
 **For iOS Simulator:**
 ```javascript
-export const API_BASE_URL = 'http://localhost:5004/api';
+export const API_BASE_URL = 'http://localhost:5005/api';
 ```
 
 ### Step 3: Test Backend Connection
 
 Open your browser and navigate to:
 ```
-http://YOUR_IP_ADDRESS:5004/api/auth/login
+http://YOUR_IP_ADDRESS:5005/api/auth/login
 ```
 
 You should see a response (even if it's an error - that means the server is reachable).
@@ -90,7 +90,7 @@ The timeout has been increased to 60 seconds in `api.js`.
 ### Fix 2: Use Localhost for Testing
 If you're using an emulator/simulator, try:
 ```javascript
-export const API_BASE_URL = 'http://localhost:5004/api';
+export const API_BASE_URL = 'http://localhost:5005/api';
 ```
 
 ### Fix 3: Restart Everything
@@ -132,16 +132,16 @@ npx react-native run-ios
    - `❌ API Error: ...`
 
 2. **Test with Postman**: 
-   - Send a POST request to `http://YOUR_IP:5004/api/auth/login`
+   - Send a POST request to `http://YOUR_IP:5005/api/auth/login`
    - Body: `{"email": "test@test.com", "password": "password"}`
 
 3. **Check Backend Logs**: The backend terminal will show all incoming requests
 
 ## Current Configuration
 
-- **API Base URL**: `http://10.211.33.35:5004/api`
+- **API Base URL**: `http://10.211.33.35:5005/api`
 - **Timeout**: 60 seconds
-- **Backend Port**: 5004
+- **Backend Port**: 5005
 - **MongoDB**: Connected to Atlas cluster
 
 ## Need More Help?
@@ -150,4 +150,4 @@ If the issue persists:
 1. Check the exact error message in the app
 2. Check backend terminal for errors
 3. Verify both devices are on the same network
-4. Try using the Android emulator with `http://10.0.2.2:5004/api`
+4. Try using the Android emulator with `http://10.0.2.2:5005/api`

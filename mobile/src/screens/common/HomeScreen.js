@@ -148,10 +148,10 @@ export default function HomeScreen({ navigation }) {
       await bookingsAPI.complete(activeBooking._id, { paymentMethod });
       setActiveBooking(null);
       setShowPaymentSelection(false);
-      alert('Payment recorded. Ask driver to confirm completion.');
+      Alert.alert('Success', 'Payment recorded. Ask driver to confirm completion.');
     } catch (e) {
       console.error('Completion error', e);
-      alert('Failed to complete ride');
+      Alert.alert('Error', 'Failed to complete ride');
     }
   };
 

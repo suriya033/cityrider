@@ -7,7 +7,7 @@ export const IS_DEV = __DEV__;
 export const API_CONFIG = {
     // Development: Local backend (for testing on same WiFi)
     development: {
-        baseURL: 'http://10.219.31.35:5004/api',
+        baseURL: 'http://10.75.151.35:5005/api',
         timeout: 10000,
     },
     // Production: Deployed backend on Render (works from anywhere!)

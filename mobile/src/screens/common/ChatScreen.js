@@ -143,7 +143,7 @@ export default function ChatScreen({ route, navigation }) {
   };
 
   const renderMessage = ({ item, index }) => {
-    const isMyMessage = item.senderId?._id === user?.id;
+    const isMyMessage = item.senderId?._id === user?._id;
     const previousMessage = index > 0 ? messages[index - 1] : null;
     const showDateSeparator = shouldShowDateSeparator(item, previousMessage);
     const showAvatar = index === messages.length - 1 ||

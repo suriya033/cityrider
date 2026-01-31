@@ -53,7 +53,7 @@ npx expo install --fix
 - ✅ No dependency conflicts
 
 ### Backend:
-- ✅ Running on port 5004
+- ✅ Running on port 5005
 - ✅ All APIs functional
 - ✅ Database connected
 

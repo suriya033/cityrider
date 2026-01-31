@@ -183,8 +183,8 @@ PUT    /api/bookings/:id/cancel
 
 ## Development Environment
 - **Mobile**: `npm start` (running on port default)
-- **Backend**: `npm run dev` (running on port 5004)
-- **API Base URL**: `http://10.211.33.35:5004/api`
+- **Backend**: `npm run dev` (running on port 5005)
+- **API Base URL**: `http://10.211.33.35:5005/api`
 
 ## Color Reference
 

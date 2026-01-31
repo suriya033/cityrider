@@ -70,10 +70,10 @@ export default function MyBookingsScreen({ navigation }) {
       setPaymentModalVisible(false);
       setSelectedBookingId(null);
       loadBookings();
-      alert('Payment recorded. Ride will appear in Ride History.');
+      Alert.alert('Success', 'Payment recorded. Ride will appear in Ride History.');
     } catch (error) {
       console.error('Error completing booking:', error);
-      alert('Failed to complete ride');
+      Alert.alert('Error', 'Failed to complete ride');
     }
   };
 

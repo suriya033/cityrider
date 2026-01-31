@@ -77,7 +77,7 @@ app.get('/', (req, res) => {
 });
 
 // Start server - LISTEN ON ALL NETWORK INTERFACES
-const PORT = process.env.PORT || 5004;
+const PORT = process.env.PORT || 5005;
 const HOST = '0.0.0.0'; // This allows connections from network devices
 
 // Get local IP address for logging

@@ -53,7 +53,7 @@ api.interceptors.response.use(
       if (error.code === 'ECONNABORTED' || error.code === 'ETIMEDOUT') {
         error.message = 'Request timeout. Server is taking too long to respond.\n\nPlease check:\n1. Backend server is running\n2. Correct IP address in API settings\n3. Your network connection';
       } else if (error.message === 'Network Error') {
-        error.message = 'Cannot connect to server.\n\nPlease check:\n1. Backend is running on port 5004\n2. IP address is correct: ' + API_BASE_URL + '\n3. Firewall settings';
+        error.message = 'Cannot connect to server.\n\nPlease check:\n1. Backend is running on port 5005\n2. IP address is correct: ' + API_BASE_URL + '\n3. Firewall settings';
       } else {
         error.message = 'Unable to connect to server.\n\nCurrent API: ' + API_BASE_URL + '\n\nPlease verify the backend is running.';
       }

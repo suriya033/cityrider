@@ -53,7 +53,6 @@ export default function ProfileScreen({ navigation }) {
     try {
       const response = await authAPI.getCurrentUser();
       setProfile(response.data);
-      setProfile(response.data);
     } catch (error) {
       console.error('Error loading profile:', error);
     } finally {

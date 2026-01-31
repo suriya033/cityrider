@@ -3,7 +3,7 @@
 ## Critical Issues Fixed
 
 ### 1. ✅ API URL Configuration
-- **Issue**: App was trying to connect to local development server (http://10.231.17.88:5004/api)
+- **Issue**: App was trying to connect to local development server (http://10.231.17.88:5005/api)
 - **Fix**: Updated to use `__DEV__` flag to differentiate between development and production
 - **Action Required**: Deploy your backend and update the production URL in `src/services/api.js`
 
@@ -65,7 +65,7 @@ After deploying backend, update `mobile/src/services/api.js`:
 
 ```javascript
 export const API_BASE_URL = __DEV__ 
-  ? 'http://10.231.17.88:5004/api'  // Development
+  ? 'http://10.231.17.88:5005/api'  // Development
   : 'https://your-deployed-backend.onrender.com/api'; // Production
 ```
 

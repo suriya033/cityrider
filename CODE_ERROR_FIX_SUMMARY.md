@@ -70,7 +70,7 @@
 ## 🚀 App Status
 
 ### Backend:
-- ✅ Running on port 5004
+- ✅ Running on port 5005
 - ✅ All routes working
 - ✅ Database connected
 - ✅ No errors
